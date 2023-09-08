@@ -17,13 +17,7 @@ namespace DiffContexts
         public Form1()
         {
             InitializeComponent();
-            p = new Pen(Color.AliceBlue);
             button1.Paint += button1_Paint;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Paint(object sender, EventArgs e)
