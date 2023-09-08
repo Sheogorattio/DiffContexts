@@ -18,7 +18,21 @@ namespace DiffContexts
         {
             InitializeComponent();
             button1.Paint += button1_Paint;
+            button1.MouseEnter += Button1_MouseEnter;
+            button1.MouseLeave += Button1_MouseLeave;
         }
+
+        private void Button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Black;
+        }
+
+        private void Button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Red;
+        }
+
+        
 
         private void button1_Paint(object sender, EventArgs e)
         {
@@ -34,7 +48,6 @@ namespace DiffContexts
             reg1.Union(reg2);
             reg1.Union(reg3);
             button1.Region = reg1;
-
         }
     }
 }
